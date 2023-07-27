@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/DrmagicE/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt/pkg/packets"
 )
 
 const (

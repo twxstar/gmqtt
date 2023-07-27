@@ -5,11 +5,11 @@
 package server
 
 import (
-	gmqtt "github.com/DrmagicE/gmqtt"
-	session "github.com/DrmagicE/gmqtt/persistence/session"
-	subscription "github.com/DrmagicE/gmqtt/persistence/subscription"
-	retained "github.com/DrmagicE/gmqtt/retained"
 	gomock "github.com/golang/mock/gomock"
+	gmqtt "github.com/twxstar/gmqtt"
+	session "github.com/twxstar/gmqtt/persistence/session"
+	subscription "github.com/twxstar/gmqtt/persistence/subscription"
+	retained "github.com/twxstar/gmqtt/retained"
 	reflect "reflect"
 )
 

@@ -5,8 +5,8 @@ import (
 
 	"github.com/golang/protobuf/ptypes/empty"
 
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/pkg/packets"
 )
 
 type publisher struct {

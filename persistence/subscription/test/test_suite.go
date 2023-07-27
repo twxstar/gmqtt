@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/persistence/subscription"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/persistence/subscription"
+	"github.com/twxstar/gmqtt/pkg/packets"
 )
 
 var (

@@ -3,9 +3,9 @@ package fifo
 import (
 	"container/list"
 
-	"github.com/DrmagicE/gmqtt/config"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
-	"github.com/DrmagicE/gmqtt/server"
+	"github.com/twxstar/gmqtt/config"
+	"github.com/twxstar/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt/server"
 )
 
 var _ server.TopicAliasManager = (*Queue)(nil)

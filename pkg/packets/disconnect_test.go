@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/DrmagicE/gmqtt/pkg/codes"
 	"github.com/stretchr/testify/assert"
+	"github.com/twxstar/gmqtt/pkg/codes"
 )
 
 func TestReadWriteDisconnectPacket_V5(t *testing.T) {

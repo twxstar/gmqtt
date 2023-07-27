@@ -5,9 +5,9 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/DrmagicE/gmqtt/pkg/codes"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
-	"github.com/DrmagicE/gmqtt/server"
+	"github.com/twxstar/gmqtt/pkg/codes"
+	"github.com/twxstar/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt/server"
 )
 
 func (a *Auth) HookWrapper() server.HookWrapper {

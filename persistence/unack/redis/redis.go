@@ -3,8 +3,8 @@ package redis
 import (
 	"github.com/gomodule/redigo/redis"
 
-	"github.com/DrmagicE/gmqtt/persistence/unack"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt/persistence/unack"
+	"github.com/twxstar/gmqtt/pkg/packets"
 )
 
 const (

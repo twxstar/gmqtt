@@ -6,11 +6,11 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/config"
-	"github.com/DrmagicE/gmqtt/persistence/queue"
-	"github.com/DrmagicE/gmqtt/persistence/subscription/mem"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/config"
+	"github.com/twxstar/gmqtt/persistence/queue"
+	"github.com/twxstar/gmqtt/persistence/subscription/mem"
+	"github.com/twxstar/gmqtt/pkg/packets"
 )
 
 type testDeliverMsg struct {

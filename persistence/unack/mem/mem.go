@@ -1,8 +1,8 @@
 package mem
 
 import (
-	"github.com/DrmagicE/gmqtt/persistence/unack"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt/persistence/unack"
+	"github.com/twxstar/gmqtt/pkg/packets"
 )
 
 var _ unack.Store = (*Store)(nil)

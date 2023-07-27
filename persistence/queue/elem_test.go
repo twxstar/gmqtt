@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/pkg/packets"
 )
 
 func assertElemEqual(a *assert.Assertions, expected, actual *Elem) {

@@ -11,9 +11,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/DrmagicE/gmqtt/config"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
-	"github.com/DrmagicE/gmqtt/server"
+	"github.com/twxstar/gmqtt/config"
+	"github.com/twxstar/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt/server"
 )
 
 var mockConfig = config.Config{

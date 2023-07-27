@@ -5,8 +5,8 @@
 package session
 
 import (
-	gmqtt "github.com/DrmagicE/gmqtt"
 	gomock "github.com/golang/mock/gomock"
+	gmqtt "github.com/twxstar/gmqtt"
 	reflect "reflect"
 )
 

@@ -3,8 +3,8 @@ package admin
 import (
 	"go.uber.org/zap"
 
-	"github.com/DrmagicE/gmqtt/config"
-	"github.com/DrmagicE/gmqtt/server"
+	"github.com/twxstar/gmqtt/config"
+	"github.com/twxstar/gmqtt/server"
 )
 
 var _ server.Plugin = (*Admin)(nil)

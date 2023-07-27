@@ -1,4 +1,4 @@
-# Gmqtt [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go) [![Gitter](https://badges.gitter.im/gmqtt/community.svg)](https://gitter.im/gmqtt/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) ![Build Status](https://github.com/DrmagicE/gmqtt/actions/workflows/test.yml/badge.svg) [![codecov](https://codecov.io/gh/DrmagicE/gmqtt/branch/master/graph/badge.svg)](https://codecov.io/gh/DrmagicE/gmqtt) [![Go Report Card](https://goreportcard.com/badge/github.com/DrmagicE/gmqtt)](https://goreportcard.com/report/github.com/DrmagicE/gmqtt)
+# Gmqtt [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go) [![Gitter](https://badges.gitter.im/gmqtt/community.svg)](https://gitter.im/gmqtt/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) ![Build Status](https://github.com/twxstar/gmqtt/actions/workflows/test.yml/badge.svg) [![codecov](https://codecov.io/gh/twxstar/gmqtt/branch/master/graph/badge.svg)](https://codecov.io/gh/twxstar/gmqtt) [![Go Report Card](https://goreportcard.com/badge/github.com/twxstar/gmqtt)](https://goreportcard.com/report/github.com/twxstar/gmqtt)
 
 Gmqtt是用Go语言实现的一个具备灵活灵活扩展能力，高性能的MQTT broker，其完整实现了MQTT V3.x和V5协议。
 
@@ -15,10 +15,10 @@ Gmqtt已用于生产，效果良好。生产环境服务于大约数百个客户
 # 功能特性
 * 内置了许多实用的钩子方法，使用者可以方便的定制需要的MQTT服务器（鉴权,ACL等功能）
 * 支持tls/ssl以及ws/wss
-* 提供扩展编程接口，可以通过函数调用直接往broker发消息，添加删除订阅等。详见`server.go`的`Server`接口定义，以及 [admin](https://github.com/DrmagicE/Gmqtt/blob/master/plugin/admin/READEME.md)插件。
+* 提供扩展编程接口，可以通过函数调用直接往broker发消息，添加删除订阅等。详见`server.go`的`Server`接口定义，以及 [admin](https://github.com/twxstar/Gmqtt/blob/master/plugin/admin/READEME.md)插件。
 * 丰富的钩子方法和扩展编程接口赋予了Gmqtt强大的插件定制化能力。详见`server/plugin.go` 和 `/plugin`。
-* 提供监控指标，支持prometheus。 (plugin: [prometheus](https://github.com/DrmagicE/Gmqtt/blob/master/plugin/prometheus/READEME.md))
-* GRPC和REST API 支持. (plugin:[admin](https://github.com/DrmagicE/Gmqtt/blob/master/plugin/admin/READEME.md))
+* 提供监控指标，支持prometheus。 (plugin: [prometheus](https://github.com/twxstar/Gmqtt/blob/master/plugin/prometheus/READEME.md))
+* GRPC和REST API 支持. (plugin:[admin](https://github.com/twxstar/Gmqtt/blob/master/plugin/admin/READEME.md))
 * 支持session持久化，broker重启消息不丢失，目前支持redis持久化。
 * 支持集群, 示例和详情请参考[federation plugin](./plugin/federation/README.md)。(注意: 这项特性并没有在生产环境中验证过)
 
@@ -27,14 +27,14 @@ Gmqtt已用于生产，效果良好。生产环境服务于大约数百个客户
 
 下列命令会使用默认配置启动Gmqtt服务，该服务使用1883端口[tcp]和8883端口[websocket]端口提供MQTT broker服务，并加载admin和prometheus插件。
 ```bash
-$ git clone https://github.com/DrmagicE/gmqtt
+$ git clone https://github.com/twxstar/gmqtt
 $ cd gmqtt/cmd/gmqttd
 $ go run . start -c default_config.yml
 ```
 
 ## 配置
 Gmqtt通过`-c`来指定配置文件路径，如果没有指定，Gmqtt默认读取`$HOME/gmqtt.yml`为配置文件。
-[配置示例](https://github.com/DrmagicE/Gmqtt/blob/master/cmd/Gmqttd/default_config.yml)。
+[配置示例](https://github.com/twxstar/Gmqtt/blob/master/cmd/Gmqttd/default_config.yml)。
 
 ## 使用持久化存储
 Gmqtt默认使用内存存储，这也是Gmqtt推荐的存储方式，内存存储具备绝佳的性能优势，但缺点是session信息会在broker重启后丢失。
@@ -58,7 +58,7 @@ persistence:
 ```
 
 ## 配置鉴权
-Gmqtt内置了基于username/password的简单鉴权机制。(由 [auth](https://github.com/DrmagicE/gmqtt/blob/master/plugin/auth) 插件提供)。
+Gmqtt内置了基于username/password的简单鉴权机制。(由 [auth](https://github.com/twxstar/gmqtt/blob/master/plugin/auth) 插件提供)。
 Gmqtt默认配置没有开启鉴权，可以通过修改配置文件来加载鉴权插件：
 ```yaml
 # plugin loading orders
@@ -76,7 +76,7 @@ $ curl -X POST -d '{"password":"user1pass"}' 127.0.0.1:8083/v1/accounts/user1
 $ curl 127.0.0.1:8083/v1/accounts/user1
 {"account":{"username":"user1","password":"20a0db53bc1881a7f739cd956b740039"}}
 ```
-API文档：[swagger](https://github.com/DrmagicE/gmqtt/blob/master/plugin/auth/swagger)
+API文档：[swagger](https://github.com/twxstar/gmqtt/blob/master/plugin/auth/swagger)
 
 
 ## Docker
@@ -86,7 +86,7 @@ $ docker run -p 1883:1883 -p 8883:8883 -p 8082:8082 -p 8083:8083  -p 8084:8084  
 ```
 
 # 文档说明
-[godoc](https://www.godoc.org/github.com/DrmagicE/gmqtt)
+[godoc](https://www.godoc.org/github.com/twxstar/gmqtt)
 ## 钩子方法
 Gmqtt实现了下列钩子方法。
 
@@ -114,7 +114,7 @@ Gmqtt实现了下列钩子方法。
 
 
 ## 怎么写插件
-[How to write plugins](https://github.com/DrmagicE/gmqtt/blob/master/plugin/README.md)
+[How to write plugins](https://github.com/twxstar/gmqtt/blob/master/plugin/README.md)
 
 # 测试
 ## 单元测试

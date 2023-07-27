@@ -1,10 +1,10 @@
 package server
 
 import (
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/persistence/session"
-	"github.com/DrmagicE/gmqtt/persistence/subscription"
-	"github.com/DrmagicE/gmqtt/retained"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/persistence/session"
+	"github.com/twxstar/gmqtt/persistence/subscription"
+	"github.com/twxstar/gmqtt/retained"
 )
 
 // Publisher provides the ability to Publish messages to the broker.

@@ -7,10 +7,10 @@ import (
 
 	redigo "github.com/gomodule/redigo/redis"
 
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/persistence/encoding"
-	"github.com/DrmagicE/gmqtt/persistence/subscription"
-	"github.com/DrmagicE/gmqtt/persistence/subscription/mem"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/persistence/encoding"
+	"github.com/twxstar/gmqtt/persistence/subscription"
+	"github.com/twxstar/gmqtt/persistence/subscription/mem"
 )
 
 const (

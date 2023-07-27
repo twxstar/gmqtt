@@ -3,7 +3,7 @@ package gmqtt
 import (
 	"errors"
 
-	"github.com/DrmagicE/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt/pkg/packets"
 )
 
 // Subscription represents a subscription in gmqtt.

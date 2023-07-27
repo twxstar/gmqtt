@@ -4,8 +4,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/persistence/subscription"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/persistence/subscription"
 )
 
 var _ subscription.Store = (*TrieDB)(nil)

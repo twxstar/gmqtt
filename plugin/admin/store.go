@@ -6,9 +6,9 @@ import (
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/config"
-	"github.com/DrmagicE/gmqtt/server"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/config"
+	"github.com/twxstar/gmqtt/server"
 )
 
 type store struct {

@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/DrmagicE/gmqtt/pkg/codes"
 	"github.com/stretchr/testify/assert"
+	"github.com/twxstar/gmqtt/pkg/codes"
 )
 
 func TestReadWriteSubackPacket_V5(t *testing.T) {

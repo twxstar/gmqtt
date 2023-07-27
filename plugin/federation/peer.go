@@ -15,8 +15,8 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/persistence/subscription"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/persistence/subscription"
 )
 
 type peerState byte

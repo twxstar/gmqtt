@@ -10,13 +10,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/DrmagicE/gmqtt/config"
-	queue_test "github.com/DrmagicE/gmqtt/persistence/queue/test"
-	sess_test "github.com/DrmagicE/gmqtt/persistence/session/test"
-	"github.com/DrmagicE/gmqtt/persistence/subscription"
-	sub_test "github.com/DrmagicE/gmqtt/persistence/subscription/test"
-	unack_test "github.com/DrmagicE/gmqtt/persistence/unack/test"
-	"github.com/DrmagicE/gmqtt/server"
+	"github.com/twxstar/gmqtt/config"
+	queue_test "github.com/twxstar/gmqtt/persistence/queue/test"
+	sess_test "github.com/twxstar/gmqtt/persistence/session/test"
+	"github.com/twxstar/gmqtt/persistence/subscription"
+	sub_test "github.com/twxstar/gmqtt/persistence/subscription/test"
+	unack_test "github.com/twxstar/gmqtt/persistence/unack/test"
+	"github.com/twxstar/gmqtt/server"
 )
 
 var redisConfig config.RedisPersistence

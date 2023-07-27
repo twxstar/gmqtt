@@ -1,7 +1,7 @@
 # Contributing to Gmqtt
 We welcome contributions to Gmqtt of any kind including documentation, plugin, test, bug reports, issues, feature requests, typo fix, etc.  
 
-If you want to write some code, but don't know where to start or what you might want to do, take a look at the [Unplanned](https://github.com/DrmagicE/gmqtt/milestone/2) milestone.
+If you want to write some code, but don't know where to start or what you might want to do, take a look at the [Unplanned](https://github.com/twxstar/gmqtt/milestone/2) milestone.
 
 ## Contributing Code
 Feel free submit a pull request. Any pull request must be related to one or more open issues.   
@@ -22,7 +22,7 @@ Testing is really important for building a robust application. Any new code or c
 #### Mocking
 Gmqtt uses [GoMock](https://github.com/golang/mock) to generate mock codes. The mock file must begin with the source file name and ends with `_mock.go`. For example, the following command will generate the mock file for `client.go`
 ```bash
-mockgen -source=server/client.go -destination=/usr/local/gopath/src/github.com/DrmagicE/gmqtt/server/client_mock.go -package=server -self_package=github.com/DrmagicE/gmqtt/server
+mockgen -source=server/client.go -destination=/usr/local/gopath/src/github.com/twxstar/gmqtt/server/client_mock.go -package=server -self_package=github.com/twxstar/gmqtt/server
 ```
 #### Assertion
 Please use [testify](https://github.com/stretchr/testify) for easy assertion.

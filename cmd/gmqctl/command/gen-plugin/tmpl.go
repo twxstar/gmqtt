@@ -8,7 +8,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/DrmagicE/gmqtt/server"
+	"github.com/twxstar/gmqtt/server"
 )
 
 const MainTemplate = `package {{.Name}}
@@ -16,8 +16,8 @@ const MainTemplate = `package {{.Name}}
 import (
 	"go.uber.org/zap"
 
-	"github.com/DrmagicE/gmqtt/config"
-	"github.com/DrmagicE/gmqtt/server"
+	"github.com/twxstar/gmqtt/config"
+	"github.com/twxstar/gmqtt/server"
 )
 
 var _ server.Plugin = (*{{.StrutName}})(nil)
@@ -56,7 +56,7 @@ func ({{.Receiver}} *{{.StrutName}}) Name() string {
 const HookTemplate = `package {{.Name}}
 
 import (
-	"github.com/DrmagicE/gmqtt/server"
+	"github.com/twxstar/gmqtt/server"
 )
 
 func ({{.Receiver}} *{{.StrutName}}) HookWrapper() server.HookWrapper {

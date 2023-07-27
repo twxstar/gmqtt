@@ -15,17 +15,17 @@ import (
 	"github.com/gorilla/websocket"
 	"go.uber.org/zap"
 
-	"github.com/DrmagicE/gmqtt"
-	"github.com/DrmagicE/gmqtt/config"
-	"github.com/DrmagicE/gmqtt/persistence/queue"
-	"github.com/DrmagicE/gmqtt/persistence/session"
-	"github.com/DrmagicE/gmqtt/persistence/unack"
-	"github.com/DrmagicE/gmqtt/pkg/codes"
-	retained_trie "github.com/DrmagicE/gmqtt/retained/trie"
+	"github.com/twxstar/gmqtt"
+	"github.com/twxstar/gmqtt/config"
+	"github.com/twxstar/gmqtt/persistence/queue"
+	"github.com/twxstar/gmqtt/persistence/session"
+	"github.com/twxstar/gmqtt/persistence/unack"
+	"github.com/twxstar/gmqtt/pkg/codes"
+	retained_trie "github.com/twxstar/gmqtt/retained/trie"
 
-	"github.com/DrmagicE/gmqtt/persistence/subscription"
-	"github.com/DrmagicE/gmqtt/pkg/packets"
-	"github.com/DrmagicE/gmqtt/retained"
+	"github.com/twxstar/gmqtt/persistence/subscription"
+	"github.com/twxstar/gmqtt/pkg/packets"
+	"github.com/twxstar/gmqtt/retained"
 )
 
 var (

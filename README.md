@@ -1,5 +1,5 @@
-[中文文档](https://github.com/DrmagicE/gmqtt/blob/master/README_ZH.md)
-# Gmqtt [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)  ![Build Status](https://github.com/DrmagicE/gmqtt/actions/workflows/test.yml/badge.svg) [![codecov](https://codecov.io/gh/DrmagicE/gmqtt/branch/master/graph/badge.svg)](https://codecov.io/gh/DrmagicE/gmqtt) [![Go Report Card](https://goreportcard.com/badge/github.com/DrmagicE/gmqtt)](https://goreportcard.com/report/github.com/DrmagicE/gmqtt)
+[中文文档](https://github.com/twxstar/gmqtt/blob/master/README_ZH.md)
+# Gmqtt [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)  ![Build Status](https://github.com/twxstar/gmqtt/actions/workflows/test.yml/badge.svg) [![codecov](https://codecov.io/gh/twxstar/gmqtt/branch/master/graph/badge.svg)](https://codecov.io/gh/twxstar/gmqtt) [![Go Report Card](https://goreportcard.com/badge/github.com/twxstar/gmqtt)](https://goreportcard.com/report/github.com/twxstar/gmqtt)
 
 # Project state
 This project is less maintained due to personal reasons. Here are some information for people who want to use this project.
@@ -16,9 +16,9 @@ It is suggested to evaluate and test carefully before running in your production
 * Support tls/ssl and websocket
 * Provide flexible plugable mechanism. See `server/plugin.go` and `/plugin` for details.
 * Provide Go interface for extensions to interact with the server. For examples, the extensions or plugins can publish message or add/remove subscription through function call.
-See `Server` interface in `server/server.go` and [admin](https://github.com/DrmagicE/Gmqtt/blob/master/plugin/admin/README.md) for details.
-* Provide metrics (by using Prometheus). (plugin: [prometheus](https://github.com/DrmagicE/gmqtt/blob/master/plugin/prometheus/README.md))
-* Provide GRPC and REST APIs to interact with server. (plugin:[admin](https://github.com/DrmagicE/gmqtt/blob/master/plugin/admin/README.md))
+See `Server` interface in `server/server.go` and [admin](https://github.com/twxstar/Gmqtt/blob/master/plugin/admin/README.md) for details.
+* Provide metrics (by using Prometheus). (plugin: [prometheus](https://github.com/twxstar/gmqtt/blob/master/plugin/prometheus/README.md))
+* Provide GRPC and REST APIs to interact with server. (plugin:[admin](https://github.com/twxstar/gmqtt/blob/master/plugin/admin/README.md))
 * Provide session persistence which means the broker can retrieve the session data after restart. 
 Currently, only redis backend is supported.
 * Provide clustering, see [federation plugin](./plugin/federation/README.md) for examples and details. (WARNING: This is an experimental feature, and has never been used in production environment.)
@@ -32,13 +32,13 @@ The following command will start gmqtt broker with default configuration.
 The broker listens on 1883 for tcp server and 8883 for websocket server with `admin` and `prometheus` plugin loaded.
 
 ```bash
-$ git clone https://github.com/DrmagicE/gmqtt
+$ git clone https://github.com/twxstar/gmqtt
 $ cd gmqtt/cmd/gmqttd
 $ go run . start -c default_config.yml
 ```
 
 ## configuration
-Gmqtt use `-c` flag to define configuration path. If not set, gmqtt reads `$HOME/gmqtt.yml` as default.  Here is a [sample configuration](https://github.com/DrmagicE/gmqtt/blob/master/cmd/gmqttd/default_config.yml).
+Gmqtt use `-c` flag to define configuration path. If not set, gmqtt reads `$HOME/gmqtt.yml` as default.  Here is a [sample configuration](https://github.com/twxstar/gmqtt/blob/master/cmd/gmqttd/default_config.yml).
 
 ## session persistence
 Gmqtt uses memory to store session data by default and it is the recommended way because of the good performance.
@@ -63,7 +63,7 @@ persistence:
 ```
 
 ## Authentication
-Gmqtt provides a simple username/password authentication mechanism. (Provided by [auth](https://github.com/DrmagicE/gmqtt/blob/master/plugin/auth) plugin).
+Gmqtt provides a simple username/password authentication mechanism. (Provided by [auth](https://github.com/twxstar/gmqtt/blob/master/plugin/auth) plugin).
 It is not enabled in default configuration, you can change the configuration to enable it:
 ```yaml
 # plugin loading orders
@@ -81,7 +81,7 @@ $ curl -X POST -d '{"password":"user1pass"}' 127.0.0.1:8083/v1/accounts/user1
 $ curl 127.0.0.1:8083/v1/accounts/user1
 {"account":{"username":"user1","password":"20a0db53bc1881a7f739cd956b740039"}}
 ```
-API Doc [swagger](https://github.com/DrmagicE/gmqtt/blob/master/plugin/auth/swagger)
+API Doc [swagger](https://github.com/twxstar/gmqtt/blob/master/plugin/auth/swagger)
 
 
 ## Docker
@@ -91,7 +91,7 @@ $ docker run -p 1883:1883 -p 8883:8883 -p 8082:8082 -p 8083:8083  -p 8084:8084  
 ```
 
 # Documentation
-[godoc](https://www.godoc.org/github.com/DrmagicE/gmqtt)
+[godoc](https://www.godoc.org/github.com/twxstar/gmqtt)
 ## Hooks
 Gmqtt implements the following hooks: 
 
@@ -119,10 +119,10 @@ Gmqtt implements the following hooks:
 
 
 ## How to write plugins
-[How to write plugins](https://github.com/DrmagicE/gmqtt/blob/master/plugin/README.md)
+[How to write plugins](https://github.com/twxstar/gmqtt/blob/master/plugin/README.md)
 
 # Contributing
-Contributions are always welcome, see [Contribution Guide](https://github.com/DrmagicE/gmqtt/blob/master/CONTRIBUTING.md) for a complete contributing guide.
+Contributions are always welcome, see [Contribution Guide](https://github.com/twxstar/gmqtt/blob/master/CONTRIBUTING.md) for a complete contributing guide.
 
 # Test
 ## Unit Test

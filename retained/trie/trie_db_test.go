@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/DrmagicE/gmqtt"
+	"github.com/twxstar/gmqtt"
 )
 
 func TestTrieDB_ClearAll(t *testing.T) {
